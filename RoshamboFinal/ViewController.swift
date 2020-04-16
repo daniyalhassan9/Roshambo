@@ -15,6 +15,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func playPaper(_ sender: Any)
+    {
+        let controller = RecordsViewController()
+        controller.userChoice = "paper"
+        print(controller.userChoice)
+        performSegue(withIdentifier: "RecordsViewController", sender: sender)
+    }
+    
 }
 

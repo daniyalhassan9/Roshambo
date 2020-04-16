@@ -11,12 +11,24 @@ import UIKit
 class RecordsViewController: UIViewController {
     
     @IBOutlet weak var result: UILabel!
-    
+    var userChoice: String?
     @IBOutlet weak var imageRock: UIImageView!
+    
+    
 
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
+        //print(userChoice)
+        
+        if userChoice != "scissors" || userChoice != "paper"
+        {
         rock()
+        }
+        else{
+            //print(userChoice)
+        }
 
         // Do any additional setup after loading the view.
     }

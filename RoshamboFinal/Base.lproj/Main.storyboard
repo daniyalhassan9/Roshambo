@@ -29,13 +29,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rock" image="rock"/>
                                 <connections>
-                                    <segue destination="sX3-l2-MUt" kind="show" id="P8J-4w-UWz"/>
+                                    <segue destination="sX3-l2-MUt" kind="show" identifier="RecordsViewController" id="P8J-4w-UWz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-my-Jcq">
                                 <rect key="frame" x="272" y="214" width="122" height="65"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Paper" image="paper"/>
+                                <connections>
+                                    <action selector="playPaper:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Rd-er-KYK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3s-yA-TPy">
                                 <rect key="frame" x="166" y="304" width="83" height="65"/>
