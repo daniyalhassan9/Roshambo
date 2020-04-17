@@ -9,9 +9,13 @@ import UIKit
 
 class RecordsViewController: UIViewController {
     
+    
+    
     @IBOutlet weak var result: UILabel!
-    var userChoice = String()
+    var userChoice: String?
     @IBOutlet weak var imageRock: UIImageView!
+    
+    
     
     
 
