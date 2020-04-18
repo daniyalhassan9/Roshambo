@@ -12,7 +12,7 @@ class RecordsViewController: UIViewController {
     
     
     @IBOutlet weak var result: UILabel!
-    var userChoice: String?
+    var userChoice: String = ""
     @IBOutlet weak var imageRock: UIImageView!
     
     
@@ -25,12 +25,19 @@ class RecordsViewController: UIViewController {
         super.viewDidLoad()
         print("Printing from Records View Controller ", userChoice)
         
-        if userChoice != "scissors" || userChoice != "Paper"
+        if userChoice == "Rock"
         {
         rock()
+            print("I was here")
+        }
+        else if userChoice == "Paper"
+        {
+            print("paper called")
+            paper()
         }
         else{
-            //print(userChoice)
+            print("Scissors called")
+            scissors()
         }
 
         // Do any additional setup after loading the view.
@@ -69,7 +76,44 @@ class RecordsViewController: UIViewController {
             print("invalid value")
         }
     }
+    func paper()
+    {
     
+            let oppMove = opponenetMove()
+            
+            switch oppMove {
+            case "paper":
+                result.text = ("tie")
+                imageRock.image = UIImage(named: "itsATie")
+            case "rock":
+                result.text = ("RockCrushesScissors")
+                imageRock.image = UIImage(named: "RockCrushesScissors")
+            case "scissors":
+               result.text = ("Sciccor beats paper")
+                imageRock.image = UIImage(named: "ScissorsCutPaper")
+            default:
+                print("invalid value")
+            }
+    
+    }
+    func scissors() {
+        
+        let oppMove = opponenetMove()
+        
+        switch oppMove {
+        case "paper":
+            result.text = ("Sciccor beats paper")
+            imageRock.image = UIImage(named: "ScissorsCutPaper")
+        case "rock":
+            result.text = ("rock beats scissor")
+            imageRock.image = UIImage(named: "RockCrushesScissors")
+        case "scissors":
+            result.text = ("tie")
+            imageRock.image = UIImage(named: "itsATie")
+        default:
+            print("invalid alue")
+        }
+    }
     
 
     /*

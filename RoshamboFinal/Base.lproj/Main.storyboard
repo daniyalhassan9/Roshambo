@@ -30,7 +30,6 @@
                                 <state key="normal" title="Rock" image="rock"/>
                                 <connections>
                                     <action selector="playRock:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YYZ-xG-epW"/>
-                                    <segue destination="sX3-l2-MUt" kind="show" identifier="RecordsViewController" id="P8J-4w-UWz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEu-my-Jcq">
@@ -61,6 +60,7 @@
                         <outlet property="paper" destination="XEu-my-Jcq" id="5eP-yQ-cXq"/>
                         <outlet property="rock" destination="2is-wG-LxX" id="QS5-rA-jxG"/>
                         <outlet property="scissor" destination="q3s-yA-TPy" id="xK8-ay-sdo"/>
+                        <segue destination="sX3-l2-MUt" kind="show" identifier="play" id="IcX-FH-7Ve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

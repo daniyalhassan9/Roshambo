@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var scissor: UIButton!
     @IBOutlet weak var paper: UIButton!
     @IBOutlet weak var rock: UIButton!
-    
+    var s: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,25 +21,34 @@ class ViewController: UIViewController {
     @IBAction func playPaper(_ sender: UIButton)
     {
         let controller = RecordsViewController()
-        controller.userChoice = "sender.title(for: UIControl.State())!"
+        s = sender.title(for: UIControl.State())!
         //print(controller.userChoice)
-        performSegue(withIdentifier: "RecordsViewController", sender: sender)
+        performSegue(withIdentifier: "play", sender: sender)
     }
     
     
     @IBAction func playScissor(_ sender: UIButton) {
         
         let controller = RecordsViewController()
-        controller.userChoice = "sender.title(for: UIControl.State())!"
+        s = sender.title(for: UIControl.State())!
         //print(controller.userChoice)
-        performSegue(withIdentifier: "RecordsViewController", sender: sender)
+        performSegue(withIdentifier: "play", sender: sender)
     }
     
     @IBAction func playRock(_ sender: UIButton)
     {
         let controller = RecordsViewController()
-        controller.userChoice = "sender.title(for: UIControl.State())!"
+        s = sender.title(for: UIControl.State())!
         //print(controller.userChoice)
-        performSegue(withIdentifier: "RecordsViewController", sender: sender)
+        performSegue(withIdentifier: "play", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "play" {
+            let controller = segue.destination as! RecordsViewController
+
+            controller.userChoice = s
+        }
     }
 }
